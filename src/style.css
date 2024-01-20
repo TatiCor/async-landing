@@ -1,4 +1,6 @@
-* {
+body {
+    display: grid;
+    place-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,13 +13,7 @@ header nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px;
-}
-.apodSection {
-    display: flex;
-    justify-content: center;
-    margin: 12px;
-    padding: 12px;
+    padding-top: 12px;
 }
 .logo-nasa {
     width: 56px;
@@ -28,6 +24,11 @@ header nav {
 .logo-nasa:hover {
     transform: scale(1.2); 
 }
+.apodSection {
+    display: flex;
+    justify-content: center;
+    
+}
 .apodContainer {
     display: flex;
     flex-direction: column;
@@ -35,6 +36,7 @@ header nav {
     align-items: center;
     text-align: center;
     width: 75%;
+    height: 100%;
 }
 
 .title {
@@ -46,10 +48,13 @@ header nav {
 .imageApo {
     border-radius: 2%;
     margin-bottom: 16px;
-    width: 80em;
+    width: 100%; 
+    height: 950px;
+    object-fit: cover; 
 }
+
 .titleImg {
-    margin: 24px;
+    margin: 12px;
 }
 .date {
     margin-bottom: 24px;
@@ -82,4 +87,26 @@ header nav {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .logo-nasa {
+        width: 42px;
+        height: 42px;
+    }
+    .apodContainer {
+        width: 90%; 
+    }
+    .imageApo {
+        height: 400px; 
+    }
+    .title {
+        padding: 12px;
+        margin: 12px;
+        font-size: 24px;
+    }
+    .titleImg {
+        font-size: 16px;
+        margin: 8px;
+    }
 }
